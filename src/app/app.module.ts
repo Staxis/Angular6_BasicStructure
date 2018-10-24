@@ -13,6 +13,7 @@ import { MenuComponent } from './menu/menu.component';
 import { AppRoutingModule } from './/app-routing.module';
 import {MatTableModule, MatFormFieldModule, MatInputModule, MatCardModule, MatSelectModule, MatOptionModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     LoginComponent,
     CreateAccountComponent,
     AccountsListComponent,
-    MenuComponent
+    MenuComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,

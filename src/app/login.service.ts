@@ -44,4 +44,10 @@ export class LoginService {
 
     return of(this.loggedUser.isAuthenticated);
   }
+
+  logout(){
+    this.loggedUser = new LoginDto();
+    this.router.navigate(['']);
+  }
+
 }

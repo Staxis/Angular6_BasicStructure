@@ -1,6 +1,13 @@
 <div class="menu">
   <ul class="list" style="overflow-x: hidden">
 
+    <li>
+        <div class="input-group" style="text-align: center">
+          <h4 class="text-center">Logged as {{loggedUser}}</h4>
+        </div>
+    </li>
+
+
     <li [ngClass]="{'active': selectedItem == 'account-list'}" (click)="listClick('account-list')">
       <a routerLink="/account-list">
         <span>Account List</span>
@@ -8,10 +15,16 @@
     </li>
 
     <li [ngClass]="{'active': selectedItem == 'create-account'}" (click)="listClick('create-account')">
-        <a routerLink="/create-account">
-          <span>Create Account</span>
-        </a>
-      </li>
+      <a routerLink="/create-account">
+        <span>Create Account</span>
+      </a>
+    </li>
+
+    <li (click)="listClick('logout')">
+      <a>
+        <span>Logout</span>
+      </a>
+    </li>
 
   </ul>
 </div>
