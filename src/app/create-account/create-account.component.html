@@ -1,0 +1,67 @@
+<section class="content">
+  <div class="container-fluid">
+    <mat-card>
+      <form name="registerForm" (ngSubmit)="registerNewAccount()">
+        <div class="input-group" style="text-align: center">
+          <h4 class="text-center">Register new account</h4>
+        </div>
+
+        <div class="input-group" style="text-align: center">
+          <mat-form-field style="width: 100%">
+            <input class="form-control" matInput placeholder="Username" type="text" id="login" required [(ngModel)]="account.login"
+              name="login" [formControl]="login">
+
+            <mat-error *ngIf="login.hasError('required')">
+              This field is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="input-group" style="text-align: center">
+          <mat-form-field style="width: 100%">
+            <input class="form-control" matInput placeholder="Password" type="password" id="password" required
+              [(ngModel)]="account.password" name="password" [formControl]="password">
+
+            <mat-error *ngIf="password.hasError('required')">
+              This field is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="input-group" style="text-align: center">
+          <mat-form-field style="width: 100%">
+            <mat-select placeholder="Select a permission type" id="permission" name="permission" [(ngModel)]="account.permission"
+              required [formControl]="permission">
+              <mat-option>None</mat-option>
+              <mat-option value="Admin">Admin</mat-option>
+              <mat-option value="Default User">Default User</mat-option>
+            </mat-select>
+            <mat-error *ngIf="permission.hasError('required')">
+              This field is required
+            </mat-error>
+
+          </mat-form-field>
+        </div>
+
+        <div class="input-group" style="text-align: center">
+          <mat-error>
+            <div *ngIf="error.hasError('OnlyAdminsCanCreateNewAccounts')">
+              Only admins can create new accounts
+            </div>
+            <div *ngIf="error.hasError('UsernameAlreadyExist')">
+              Username already exist
+            </div>
+          </mat-error>
+        </div>
+
+        <div class="row" style="text-align: center">
+          <div class="col-xs-4">
+            <button id="LoginButton" style="height: 25px; width: 60px" class="btn btn-block bg-blue-grey waves-effect" type="submit">Create</button>
+          </div>
+        </div>
+
+      </form>
+
+    </mat-card>
+  </div>
+</section>
