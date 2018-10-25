@@ -13,9 +13,14 @@ Execute o comando "npm start" na pasta base do projeto. No seu browser acesse ht
 ##Login e senha
 
 Usuario administrador
+
 username: admin
+
 senha: admin
 
+
 Usuario comum
+
 username: user
+
 senha: user
