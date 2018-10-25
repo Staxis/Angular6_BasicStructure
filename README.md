@@ -10,17 +10,14 @@ Execute o comando "npm install" na pasta base do projeto para criar a pasta node
 
 Execute o comando "npm start" na pasta base do projeto. No seu browser acesse http://localhost:4200
 
-##Login e senha
+## Login e senha
 
-Usuario administrador
-
+#### Usuario administrador
 username: admin
 
 senha: admin
 
-
-Usuario comum
-
+#### Usuario comum
 username: user
 
 senha: user
